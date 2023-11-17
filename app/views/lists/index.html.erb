@@ -1,8 +1,38 @@
-<%#= @lists %>
-<div>
- <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list)%>
-  <%end%>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/vecteurs-libre/cinema-salle-theatre-pour-premier-film-design-affiche-chaises-dans-piece_1017-8728.jpg?size=626&ext=jpg&ga=GA1.1.979251218.1700233854&semt=ais);">
+  <div class="container">
+    <h1> Save any kind of movies</strong>!</h1>
+    <a class="btn btn-flat" href="#"></a>
+  </div>
 </div>
 
-  <%= link_to "create a new list", new_list_path%>
+<div class="container mt-4">
+  <%= "MY LISTS" %>
+
+  <div class= "d-flex justify-content-start mt-5">
+    <ul>
+     <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list), class:"text-decoration-none"%> </li>
+      <%end%>
+    </ul>
+  </div>
+
+  <div class="btn bg-success">
+    <%= link_to 'create a movie list', new_list_path, style:"color:white"%>
+  </div>
+
+</div>
+
+
+<%#
+# utilisation de class, style
+class = -> quand c'est du HTML
+quand erb -> class:
+
+style: ecrire du CSS dans le HTML
+comme un hash avec clé:valeur
+pareillement aurait pu mettre style= -> CSS mais moins pratique
+
+# ajouter une image
+suivre le setup active storage
+
+# delete sur nos lists ? %>
