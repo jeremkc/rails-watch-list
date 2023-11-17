@@ -21,16 +21,16 @@
   # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 
-  default: &default
+default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
 
-  development:
+development:
   <<: *default
   database: rails-watch-list_development
 
-  test:
+test:
   <<: *default
   database: rails-watch-list_test
 
